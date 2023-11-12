@@ -45,6 +45,7 @@ main
 .flip
 {
     background-size: cover;
+    cursor: pointer;
     border: unset;
     width: 32px;
     height: 32px;
