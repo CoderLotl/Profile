@@ -1,11 +1,11 @@
 import { StorageManager } from '../classes/StorageManager.js';
 let storageManager = new StorageManager();
 let buttons;
-let inner;
+let main;
 
 document.addEventListener('DOMContentLoaded', ()=>
 {
-    inner = document.getElementsByClassName('inner')[0];
+    main = document.getElementsByTagName('main')[0];
     buttons = 
     {
         btn1: document.getElementById('btn1'),
@@ -49,12 +49,12 @@ function Init()
 
     buttons['flip1'].addEventListener('click', ()=>
     {
-        inner.style.transform = 'rotateY(180deg)';
+        main.style.transform = 'rotateY(180deg)';
     });
 
     buttons['flip2'].addEventListener('click', ()=>
     {
-        inner.style.transform = 'rotateY(0deg)';
+        main.style.transform = 'rotateY(0deg)';
     });
 }
 
