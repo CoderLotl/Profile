@@ -1,15 +1,20 @@
 import { StorageManager } from '../classes/StorageManager.js';
 let storageManager = new StorageManager();
 let buttons;
+let inner;
 
 document.addEventListener('DOMContentLoaded', ()=>
 {
+    inner = document.getElementsByClassName('inner')[0];
     buttons = 
     {
         btn1: document.getElementById('btn1'),
         btn2: document.getElementById('btn2'),
-        btn3: document.getElementById('btn3'),        
+        btn3: document.getElementById('btn3'),
+        flip1: document.getElementById('flip1'),
+        flip2: document.getElementById('flip2'),
     };
+
     Init();
 });
 
@@ -40,6 +45,16 @@ function Init()
         let container = document.getElementsByClassName('portfolio')[0];
         container.classList.add('blue');
         container.classList.remove('red', 'yellow');
+    });
+
+    buttons['flip1'].addEventListener('click', ()=>
+    {
+        inner.style.transform = 'rotateY(180deg)';
+    });
+
+    buttons['flip2'].addEventListener('click', ()=>
+    {
+        inner.style.transform = 'rotateY(0deg)';
     });
 }
 

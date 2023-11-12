@@ -8,35 +8,45 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/flip.css">
     <script type="module" src="./js/scripts/main.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <img class="background-d">
     <img class="background">
-    <div id="main">
-        <section class="sec element-round">
-            <p class="title">My Profile <img class="emoji" src="./resources/icons/axolotl.webp"></p>
-            <span class="sub-sec">
-                <img class="profile-pic" src="./resources/images/placeholder.jpg">
-                <span class="bio">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et beatae blanditiis repellat quidem, mollitia repellendus recusandae illo distinctio autem cumque!
-                </span>
-            </span>
-            <nav class="element-round sub-sec flex-v">
-                <p class="sub-title">Portfolio</p>
-                <div id="btn-div" class="element-round micro-sec flex-h">
-                    <a id="btn1" class="element-round">HTML</a>
-                    <a id="btn2" class="element-round">PHP</a>
-                    <a id="btn3" class="element-round">Other Stuff</a>
+    <main>
+        <div class="inner">
+            <div class="front">
+                <section class="sec element-round">
+                    <p class="title">My Profile <img class="emoji" src="./resources/icons/axolotl.webp"></p>
+                    <span class="sub-sec">
+                        <img class="profile-pic" src="./resources/images/placeholder.jpg">
+                        <span class="bio">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et beatae blanditiis repellat quidem, mollitia repellendus recusandae illo distinctio autem cumque!
+                            <button id="flip1" class="flip">►</button>
+                        </span>
+                    </span>
+                    <nav class="element-round sub-sec flex-v">
+                        <p class="sub-title">Portfolio</p>
+                        <div id="btn-div" class="element-round micro-sec flex-h">
+                            <a id="btn1" class="element-round">HTML</a>
+                            <a id="btn2" class="element-round">PHP</a>
+                            <a id="btn3" class="element-round">Other Stuff</a>
+                        </div>
+                    </nav>
+                </section>
+                <div class="sec element-round portfolio">
+                    <div id="container">
+                
+                    </div>
                 </div>
-            </nav>
-        </section>
-        <div class="sec element-round portfolio">
-            <div id="container">
-        
+            </div>
+            <div class="back">
+                <button id="flip2" class="flip">►</button>
             </div>
         </div>
-        <img class="transp left" src="./resources/images/l2.png" alt="">
-        <img class="transp right" src="./resources/images/l2.png" alt="">
-    </div>
+    </main>
+    <img class="transp left" src="./resources/images/l2.png" alt="">
+    <img class="transp right" src="./resources/images/l2.png" alt="">
 </body>
 </html>
