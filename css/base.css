@@ -96,6 +96,14 @@ nav a:hover
     margin-bottom: 10px;
 }
 
+.sec2
+{
+    background-color: rgb(73, 153, 207);
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
 .sub-sec
 {    
     display: flex;    
