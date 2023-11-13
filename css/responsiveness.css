@@ -1,4 +1,27 @@
-@media screen and(max-width: 480px)
+@media only screen and (max-width: 420px)
 {
-       
+    body
+    {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    main
+    {
+        padding-left: unset;
+        padding-right: unset;
+        padding-top: 10px;
+    }
+
+    nav
+    {
+        padding-top: unset;
+        justify-content: center !important;
+        margin-bottom: 10px !important;
+    }
+
+    .sec
+    {
+        padding-top: unset;
+    }
 }
