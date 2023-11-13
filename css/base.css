@@ -1,6 +1,6 @@
 body
 {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(5, 5, 5);
     margin: 0%;
     min-width: 480px;    
     display: flex;    
@@ -12,7 +12,7 @@ body
 {
     background-image: url(../resources/images/foliage.webp);
     position: fixed;
-    width: 100%;
+    width: 80%;
     height: 100%;
     opacity: 0;
     z-index: 2;    
@@ -22,7 +22,7 @@ body
 {
     background-image: url(../resources/images/imageedit_2_2921364143-modified.webp);
     position: fixed;
-    width: 100%;
+    width: 80%;
     height: 100%;
     z-index: 1;    
 }
