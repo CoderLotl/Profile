@@ -124,8 +124,13 @@ nav a:hover
 
 .profile-pic
 {
+    background-image: url(../resources/images/coder.png);
+    background-size: cover;
+    background-repeat: no-repeat;    
     width: 150px;
-    height: 100px;
+    height: 150px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .title
