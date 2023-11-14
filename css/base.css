@@ -133,6 +133,17 @@ nav a:hover
     border-bottom-right-radius: 50px;
 }
 
+.real-pic
+{
+    background-image: url(../resources/images/real-pic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;    
+    width: 150px;
+    height: 150px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
 .title
 {
     font-family: 'Charm';
