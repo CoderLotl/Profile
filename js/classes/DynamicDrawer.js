@@ -28,7 +28,29 @@ export class DynamicDrawer
             div.className = htmlClass;
         }
         return div;
-    }    
+    }
+    
+    CreateAnchor(id, a_class, text, href)
+    {
+        let a = document.createElement('a');
+        if(id)
+        {
+            a.id = id;
+        }
+        if(a_class)
+        {
+            a.classList.add(a_class);
+        }
+        if(text)
+        {
+            a.textContent = text;
+        }
+        if(href)
+        {
+            a.href = href;
+        }
+        return a;
+    }
 
     /**     
      * Crea un input.
@@ -153,54 +175,5 @@ export class DynamicDrawer
         link.rel = rel;
         link.href = href;
         return link;
-    }
-
-    CreateTable(tableHeaders, id, monsters)
-    {        
-        let table = document.createElement('table');
-        table.id = id;
-        let tableBody = document.createElement('tbody');
-        table.appendChild(tableBody);
-
-        for(let i = 0; i < tableHeaders.length; i++)
-        {
-            let th = document.createElement('th');
-            th.textContent = tableHeaders[i];
-            tableBody.appendChild(th);
-            if(tableHeaders[i] == 'ID')
-            {
-                th.classList.add('hidden');
-            }
-        }
-
-        this.LoadMonstersToTable(table, tableHeaders, monsters);
-
-        return table;
-    }
-
-    LoadMonstersToTable(table, tableHeaders, monsters)
-    {           
-        let tableBody = table.getElementsByTagName('tbody')[0];
-
-        monsters.forEach(mon =>
-        {            
-            let row = document.createElement('tr');            
-            tableBody.appendChild(row);
-            
-            for (let i = 0; i < tableHeaders.length; i++)
-            {
-                let td = document.createElement('td');
-                if (tableHeaders[i] === 'ID')
-                {
-                    td.classList.add('hidden');
-                    td.textContent = mon.id;
-                }
-                else
-                {
-                    td.textContent = mon[tableHeaders[i].toLowerCase()];
-                }
-                row.appendChild(td);
-            }
-        });  
     }
 }
