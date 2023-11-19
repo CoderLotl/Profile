@@ -9,6 +9,7 @@ let dd = new DynamicDrawer();
 document.addEventListener('DOMContentLoaded', ()=>
 {
     main = document.getElementsByTagName('main')[0];    
+    BrowserAdapt();
     buttons = 
     {
         btn1: document.getElementById('btn1'),
@@ -20,6 +21,22 @@ document.addEventListener('DOMContentLoaded', ()=>
 
     Init();
 });
+
+function BrowserAdapt()
+{
+    let userAgent = navigator.userAgent;
+    let body = document.getElementsByTagName('body')[0];
+    let css = dd.CreateLink('stylesheet', null);
+    body.appendChild(css);
+    if(userAgent.indexOf("Firefox") !== -1)
+    {
+        css.href = './css/flip_ff.css';
+    }
+    else
+    {
+        css.href = './css/flip_nf.css';
+    }
+}
 
 function Init()
 {

@@ -22,7 +22,7 @@ main
     -o-transition: transform 0.5s;
 }
 
-.inner
+/*.inner
 {
     transform-style: preserve-3d;
     transition: transform 0.5s;
@@ -33,7 +33,7 @@ main
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;    
-}
+}*/
 
 .front,
 .back
