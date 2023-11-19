@@ -20,11 +20,9 @@ main
 }
 
 .inner
-{
-    backface-visibility: hidden;
+{    
     transform-style: preserve-3d;
-    transition: transform 0.5s;
-    -webkit-backface-visibility: hidden;
+    transition: transform 0.5s;    
 }
 
 .front,
