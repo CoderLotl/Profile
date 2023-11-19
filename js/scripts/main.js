@@ -52,11 +52,15 @@ function Init()
     buttons['flip1'].addEventListener('click', ()=>
     {
         main.style.transform = 'rotateY(180deg)';
+        //document.getElementById('front').style.visibility = 'hidden';
+        //document.getElementById('back').style.visibility = 'unset';
     });
 
     buttons['flip2'].addEventListener('click', ()=>
     {
         main.style.transform = 'rotateY(0deg)';
+        //document.getElementById('front').style.visibility = 'unset';
+        //document.getElementById('back').style.visibility = 'hidden';
     });
 }
 
