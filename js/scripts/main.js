@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=>
     };
 
     Init();
+    buttons['btn1'].click();
 });
 
 function BrowserAdapt()
@@ -44,7 +45,7 @@ function Init()
     buttons['btn1'].addEventListener('click', ()=>
     {
         SwitchButton('btn1');
-        //ShowHTML();    
+        ShowHTML();    
         storageManager.WriteSS('lastPage', 'btn1');                
         container.classList.add('red');
         container.classList.remove('yellow', 'blue');
@@ -53,6 +54,7 @@ function Init()
     buttons['btn2'].addEventListener('click', ()=>
     {
         SwitchButton('btn2');
+        ShowPHP();
         storageManager.WriteSS('lastPage', 'btn2');        
         container.classList.add('yellow');
         container.classList.remove('red', 'blue');
@@ -68,16 +70,12 @@ function Init()
 
     buttons['flip1'].addEventListener('click', ()=>
     {
-        main.style.transform = 'rotateY(180deg)';
-        //document.getElementById('front').style.visibility = 'hidden';
-        //document.getElementById('back').style.visibility = 'unset';
+        main.style.transform = 'rotateY(180deg)';        
     });
 
     buttons['flip2'].addEventListener('click', ()=>
     {
-        main.style.transform = 'rotateY(0deg)';
-        //document.getElementById('front').style.visibility = 'unset';
-        //document.getElementById('back').style.visibility = 'hidden';
+        main.style.transform = 'rotateY(0deg)';        
     });
 }
 
@@ -88,10 +86,12 @@ function SwitchButton(selected)
         if(key != selected)
         {
             buttons[key].style.backgroundColor = '';
+            buttons[key].style.boxShadow = '0px 4px rgb(5, 5, 59)';
         }
         else
         {
             buttons[key].style.backgroundColor = 'yellowgreen';
+            buttons[key].style.boxShadow = '0px 4px rgb(91, 151, 3)';
         }
     }    
 }
@@ -107,19 +107,24 @@ async function ShowHTML()
 {
     container.innerHTML = '';
     let links = await ReadJSON('html');
+    let ul = document.createElement('ul');
+    container.appendChild(ul);
     let data = links[0];
     for(let key in data)
     {
+        let li = document.createElement('li');
+        ul.appendChild(li);
+        ul.classList.add('fade-in');
         let p = document.createElement('p');
         p.textContent = key + ": ";
-        p.classList.add('link-tittle');
-        let a = dd.CreateAnchor(null, 'links', data[key], data[key]);
+        p.classList.add('link-title');
+        let a = dd.CreateAnchor(null, 'links', data[key], data[key], true);
         p.appendChild(a);
-        container.appendChild(p);
+        li.appendChild(p);
     }   
 }
 
 async function ShowPHP()
 {
-    
+    container.innerHTML = '';
 }

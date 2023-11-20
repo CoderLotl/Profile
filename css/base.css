@@ -8,6 +8,30 @@ body
     align-items: center;    
 }
 
+main
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100%;
+    background-color: rgb(131, 189, 83);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    width: 420px;
+    box-shadow: 0 0 10px #0b0b0b99;
+    z-index: 3;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+}
+
 .background
 {
     background-image: url(../resources/images/foliage.webp);
@@ -39,8 +63,8 @@ nav
 
 nav a
 {
-    background-color: rgb(66, 165, 0);    
-    padding: 3px;    
+    background-color: rgb(66, 165, 0);
+    padding: 3px;
     border: 1px solid;
     border-color: black;
     display: flex;
@@ -49,6 +73,12 @@ nav a
     align-items: center;
     text-align: center;
     overflow-wrap: normal;
+    box-shadow: 0px 4px rgb(5, 5, 59);    
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
 
 nav a:hover
@@ -60,6 +90,7 @@ nav a:hover
     -ms-transition: 1s;
     -o-transition: 1s;
     cursor: default;
+    box-shadow: 0px 4px rgb(133, 133, 231) !important;
 }
 
 #btn-div
@@ -168,10 +199,12 @@ nav a:hover
 .bio
 {
     width: 60%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .portfolio
 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: aliceblue;
     height: 300px;
     transition: 1s;
@@ -225,4 +258,27 @@ nav a:hover
     -ms-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     z-index: 5;
+}
+
+.links
+{
+    font-weight: 400;
+    text-shadow: 1px 1px 10px maroon, -1px -1px 10px maroon;
+    transition: 0.5s;
+    font-style: italic;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    text-decoration: none;
+}
+
+.links:hover
+{
+    text-shadow: -5px 5px 10px red, 5px 5px 10px maroon, -5px -5px 10px maroon;
+}
+
+.link-title
+{
+    font-weight: 500;    
 }

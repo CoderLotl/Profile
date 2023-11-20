@@ -30,7 +30,7 @@ export class DynamicDrawer
         return div;
     }
     
-    CreateAnchor(id, a_class, text, href)
+    CreateAnchor(id, a_class, text, href, blank = null)
     {
         let a = document.createElement('a');
         if(id)
@@ -48,6 +48,10 @@ export class DynamicDrawer
         if(href)
         {
             a.href = href;
+        }
+        if(blank)
+        {
+            a.target = '_blank';
         }
         return a;
     }

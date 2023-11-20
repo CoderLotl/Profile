@@ -24,7 +24,7 @@
         padding-left: unset;
         padding-right: unset;
         padding-top: 10px;
-        height: 100%;
+        width: 280px;
     }
 
     nav
@@ -43,4 +43,8 @@
     {
         margin-right: 10px;
     }
+    .left, .right
+    {
+        visibility: hidden;
+    }    
 }
