@@ -31,7 +31,7 @@
     -ms-border-radius: 50% ;
     -o-border-radius: 50% ;
     background-color: #04AA6D;
-    box-shadow: 0 3px #999;
+    box-shadow: 0 3px #999;    
 }
 
 .flip:hover
@@ -42,6 +42,6 @@
 .flip:active
 {
     background-color: #3e8e41;
-    box-shadow: 0 3px #eafa0c;
+    box-shadow: 0 0px #eafa0c !important;
     transform: translateY(4px);
 }
