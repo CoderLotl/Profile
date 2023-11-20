@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>CoderLotl</title>
     <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.gif">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">"
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">"
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/text.css">
+    <link rel="stylesheet" href="./css/generalStyling.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/flip.css">
@@ -21,10 +23,14 @@
             <div class="front">
                 <section class="sec element-round">
                     <p class="title">My Profile <img class="emoji" src="./resources/icons/axolotl.webp"></p>
-                    <span class="sub-sec">
+                    <span id="front-sec" class="sub-sec">
                         <img class="profile-pic">
                         <span class="bio">
-                            Sitio en construcción :)<br><img src="./resources/images/uc.png" class="small-pic"><br>
+                            Hi there!<br>
+                            I'm <span class="my-name">Jerónimo Delmar</span>, known online too as <span class="nickname">"CoderLotl"</span>.<br>
+                            I'm a <span class="career">Programming</span> universitary student at <span class="university">UTN-FRA</span> <img id="utn">, in <span class="location">Buenos Aires, Argentina</span> <img class="flag">.
+                            Father of a daughter, enthusiastic programmer, and a fan of axolotls!! (yes, you guessed it right)<br><br>
+                            You can find more info about me just turning this page by pressing the button!<br><br>
                             <button id="flip1" class="flip">►</button>
                         </span>
                     </span>
@@ -43,12 +49,15 @@
                     </div>
                 </div>
             </div>
-            <div class="element-round back sec2">
+            <section id="back-sec" class="element-round back sec2">
                 <!-- <img class="real-pic"> -->
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni similique ea eligendi eaque at exercitationem nihil. Sunt, fugit culpa.
                 <button id="flip2" class="flip">►</button>
-            </div>
+            </section>
         </div>
+        <footer class="front">        
+            <span>All rights reserved&copy;</span>
+        </footer>
     </main>
     <!-- img class="transp left" src="./resources/images/l2.png" alt="" -->
     <!-- img class="transp right" src="./resources/images/l2.png" alt="" -->
