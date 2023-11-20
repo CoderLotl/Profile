@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', ()=>
 function BrowserAdapt()
 {
     let userAgent = navigator.userAgent;
-    let body = document.getElementsByTagName('body')[0];
+    let head = document.getElementsByTagName('head')[0];
     let css = dd.CreateLink('stylesheet', null);
-    body.appendChild(css);
+    head.appendChild(css);
     if(userAgent.indexOf("Firefox") !== -1)
     {
         css.href = './css/flip_ff.css';
@@ -63,6 +63,7 @@ function Init()
     buttons['btn3'].addEventListener('click', ()=>
     {
         SwitchButton('btn3');
+        ShowOtherStuff();
         storageManager.WriteSS('lastPage', 'btn3');        
         container.classList.add('blue');
         container.classList.remove('red', 'yellow');
@@ -85,13 +86,11 @@ function SwitchButton(selected)
     {
         if(key != selected)
         {
-            buttons[key].style.backgroundColor = '';
-            buttons[key].style.boxShadow = '0px 4px rgb(5, 5, 59)';
+            buttons[key].classList.remove('nav-active-btn');
         }
         else
         {
-            buttons[key].style.backgroundColor = 'yellowgreen';
-            buttons[key].style.boxShadow = '0px 4px rgb(91, 151, 3)';
+            buttons[key].classList.add('nav-active-btn');
         }
     }    
 }
@@ -125,6 +124,11 @@ async function ShowHTML()
 }
 
 async function ShowPHP()
+{
+    container.innerHTML = '';
+}
+
+async function ShowOtherStuff()
 {
     container.innerHTML = '';
 }
