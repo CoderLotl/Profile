@@ -171,6 +171,13 @@ nav a:active
     margin-right: 2px;
 }
 
+#button
+{
+    color: maroon;    
+    font-weight: 600;
+    text-shadow: 1px 2px 10px red;
+}
+
 .red
 {
     background-color: rgb(171, 245, 156);
