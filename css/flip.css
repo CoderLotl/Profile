@@ -23,13 +23,6 @@
     background-size: cover;
     cursor: pointer;
     border: unset;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    -webkit-border-radius: 50% ;
-    -moz-border-radius: 50% ;
-    -ms-border-radius: 50% ;
-    -o-border-radius: 50% ;
     background-color: #04AA6D;
     box-shadow: 0 3px #999;    
 }
