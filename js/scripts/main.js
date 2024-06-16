@@ -41,7 +41,7 @@ function BrowserAdapt()
 
 function Init()
 {
-    container = document.getElementsByClassName('portfolio')[0];    
+    container = document.getElementById('portfolio');
     buttons['btn1'].addEventListener('click', ()=>
     {
         SwitchButton('btn1');
