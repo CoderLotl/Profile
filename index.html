@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/flip.css">
     <link rel="stylesheet" href="./css/responsiveness.css">
     <script type="module" src="./js/scripts/main.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <img class="background-d">
@@ -21,42 +22,45 @@
     <main>
         <div class="inner">
             <div class="front">
-                <section class="sec element-round">
-                    <p class="title">My Profile <img class="emoji" src="./resources/icons/axolotl.webp"></p>
-                    <span id="front-sec" class="sub-sec">
-                        <img class="profile-pic">
-                        <span class="bio">
+                <section class="bg-[#52945a] p-[10px] overflow-hidden mb-[10px] rounded-[20px]">
+                    <p class="font-['Raleway'] text-[26px] border-b-2 border-[#a52a2a] mb-2">My Profile <img class="emoji" src="./resources/icons/axolotl.webp"></p>
+                    <span class="flex mb-[30px] justify-between">
+                        <span class="w-full font-['Raleway'] text-left whitespace-pre-line">
+                            <img class="profile-pic mr-[10px] float-left">
                             Hi there!<br>
-                            My name is <span class="my-name">Jerónimo Delmar</span>, known online too as <span class="nickname">"CoderLotl"</span>.<br>
-                            I'm a <span class="career">Programming</span> universitary student at <span class="university">UTN-FRA</span> <img id="utn">, in <span class="location">Buenos Aires, Argentina</span> <img class="flag">.
-                            <br><br>
-                            You can find more info about me just turning this page by pressing the <span id="button">button</span> >>><br><br>
-                            <button id="flip1" class="flip">►</button>
+                            My name is <span class="font[600] italic text-[#45fa7c]">Jerónimo Delmar</span>, known online too as <span class="font-[600] italic text-[#c2c2c2]">"CoderLotl"</span>.
+                            I'm a <span class="career">Programming</span> universitary student at <span class="university inline-block">UTN-FRA</span> <img class="utn inline">, in <span class="location">Buenos Aires, Argentina</span> <img class="flag inline">.
+
+                            You can find more info about me just turning this page by pressing the <span id="button">button</span>.
+                            <div class="flex justify-center">
+                                <button id="flip1" class="flip w-[32px] h-[32px] rounded-[50%] mt-4">►</button>
+                            </div>
                         </span>
                     </span>
-                    <nav class="element-round sub-sec flex-v">
-                        <p class="sub-title">Portfolio</p>
-                        <div id="btn-div" class="element-round micro-sec flex-h">
-                            <a id="btn1" class="element-round">HTML</a>
-                            <a id="btn2" class="element-round">PHP</a>
-                            <a id="btn3" class="element-round">Other Stuff</a>
+                    <nav class="flex flex-col mb-[30px] justify-between items-center rounded-[20px]">
+                        <p class="self-start ml-[10px] w-[95%] font-['Raleway'] text-[20px] border-b-2 border-[#a52a2a] mb-2">Portfolio</p>
+                        <div class="border-[1px] border-black rounded-[20px] w-[80%] flex flex-row justify-between px-[5%] py-[10px]">
+                            <a id="btn1" class="rounded-[20px]">HTML</a>
+                            <a id="btn2" class="rounded-[20px]">PHP</a>
+                            <a id="btn3" class="rounded-[20px]">Other Stuff</a>
                         </div>
                     </nav>
                 </section>
-                <div class="sec element-round portfolio">
+                <div id="portfolio" class="rounded-[20px] font-['Raleway'] bg-[#f0f8ff] h-[300px] p-4 duration-[1000ms] mb-4">
                     <div id="container">
                 
                     </div>
                 </div>
             </div>
-            <section id="back-sec" class="element-round back sec2">
+            <section class="rounded-[20px] back bg-[#4999cf] p-[10px] overflow-hidden mb-[10px]">
                 <!-- <img class="real-pic"> -->
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni similique ea eligendi eaque at exercitationem nihil. Sunt, fugit culpa.
-                <button id="flip2" class="flip">►</button>
+                <button id="flip2" class="flip w-[32px] h-[32px] rounded-[50%]">►</button>
             </section>
         </div>
-        <footer class="front">        
+        <footer class="front flex flex-col w-full justify-center items-center mb-2">        
             <span>All rights reserved&copy;</span>
+            <span">Uses <span class="font-bold">Tailwind</span> <img class="tailwind inline"></span>
         </footer>
     </main>
     <!-- img class="transp left" src="./resources/images/l2.png" alt="" -->

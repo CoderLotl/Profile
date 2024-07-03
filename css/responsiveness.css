@@ -51,10 +51,6 @@
         width: 100%;
     }
 
-    .profile-pic
-    {
-        margin-right: 10px;
-    }
     .left, .right
     {
         visibility: hidden;
